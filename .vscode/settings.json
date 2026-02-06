@@ -30,6 +30,7 @@
         "comments": "on",
         "strings": "inline",
     },
+    "files.autoSave": "off",
     "workbench.activityBar.location": "top",
     "workbench.sideBar.location": "right",
     "window.menuBarVisibility": "compact",
