@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->integer('nis')->unique();
+            $table->string('nis', 16)->unique();
+            $table->foreignId('major_id')->constrained()->cascadeOnDelete();
             $table->string('name');
             $table->enum('gender', ['l','p']);
             $table->date('date_of_birth');

@@ -22,9 +22,9 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UserSeeder::class,
             MajorSeeder::class,
-            
+
         ]);
         $majors = Major::all();
-        Student::factory()->recycle($majors)->create();
+        Student::factory(50)->recycle($majors)->create();
     }
 }

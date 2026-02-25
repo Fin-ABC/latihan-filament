@@ -16,12 +16,6 @@ return new class extends Migration
             $table->string('name_major');
             $table->timestamps();
         });
-
-        Schema::table('students', function (Blueprint $table){
-            $table->foreignId('id_major')->constrained(
-                table: 'majors', indexName: 'student_major_id'
-            );
-        });
     }
 
     /**

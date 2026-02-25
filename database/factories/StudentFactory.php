@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\major;
+use App\Models\Major;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -21,8 +21,8 @@ class StudentFactory extends Factory
             'name' => fake()->name(),
             'nis' => fake()->unique()->nik(),
             'date_of_birth' => fake()->date(),
-            'major' => major::factory(),
-            'address' => fake()->sentences(),
+            'major_id' => Major::factory(),
+            'address' => fake()->address(),
             'gender' => fake()->randomElement(['l', 'p']),
         ];
     }
